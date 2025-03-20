@@ -44,8 +44,8 @@ const PasscodeIndex: React.FC<PasscodeIndexProps> = ({
         </View>
         <Pressable
           onPress={handleSubmit}
-          className="mt-16 items-center justify-center rounded-[31px] bg-[#14281D] px-[32ppx] py-[20px] text-[#FFFCDC]">
-          <Text className="text-bold font-medium text-white">{buttonText}</Text>
+          className="mt-16 items-center justify-center rounded-[31px] bg-[#14281D] py-[16px]">
+          <Text className="text-bold font-medium text-[#FFFCDC]">{buttonText}</Text>
         </Pressable>
         <View style={styles.keypad}>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, '', 0].map((number: number | string) => (

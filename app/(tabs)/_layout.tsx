@@ -30,9 +30,9 @@ export default function TabLayout() {
           tabBarActiveTintColor: '#087443',
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <Image source={ImageAssets.activeHome} className="h-4 w-4" />
+              <Image source={ImageAssets.activeHome} className="h-6 w-6" />
             ) : (
-              <Image source={ImageAssets.home} className="h-4 w-4" />
+              <Image source={ImageAssets.home} className="h-6 w-6" />
             ),
         }}
       />

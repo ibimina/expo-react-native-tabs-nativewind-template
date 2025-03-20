@@ -1,9 +1,25 @@
 import { Link, useRouter } from 'expo-router';
+import { useState, useEffect } from 'react';
 import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity } from 'react-native';
 
 import { ImageAssets } from '@/assets/images';
+
+ 
 export default function HomeScreen() {
   const router = useRouter();
+  const [greeting, setGreeting] = useState('');
+
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Good morning 🌤️';
+    if (hour < 18) return 'Good afternoon ☀️';
+    return 'Good evening 🌙';
+  };
+
+  useEffect(() => {
+    setGreeting(getGreeting());
+  }, []);
+
   return (
     <SafeAreaView className="flex-1 bg-[#14281D]">
       <View className=" mb-10 bg-[#14281D]">
@@ -11,7 +27,7 @@ export default function HomeScreen() {
           <View className="flex-row items-center gap-3 ">
             <Image source={ImageAssets.avatar} className="h-12 w-12 rounded-full" />
             <View>
-              <Text className=" text-sm font-semibold text-white">Good morning 🌤️</Text>
+              <Text className=" text-sm font-semibold text-white">{greeting}</Text>
               <Text className="text-xs font-light text-white">How are you doing today?</Text>
             </View>
           </View>
@@ -51,7 +67,9 @@ export default function HomeScreen() {
         <View className=" bg-white">
           <View className="flex-row items-center justify-between px-6 py-4  ">
             <Text className="text-base font-semibold text-[#111322]">Transactions</Text>
-            <Text className="text-lg font-semibold text-[#087443] underline">See all</Text>
+            <TouchableOpacity>
+              <Text className="text-lg font-semibold text-[#087443] underline">See all</Text>
+            </TouchableOpacity>
           </View>
           <View className="px-6">
             <Text className="mb-2 text-xs font-medium text-[#404968]">YESTERDAY</Text>

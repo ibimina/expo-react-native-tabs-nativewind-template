@@ -6,11 +6,11 @@ export default function WithdrawalTransactionDetails() {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-      <View className="mb-10  p-6">
+      <View className="mb-10  p-4">
         <Text className="mb-3 text-xl font-extrabold text-[#111322]">Transaction details</Text>
 
-        <View className="mt-6">
-          <View className="mb-8">
+        <View className="mt-2">
+          <View className="mb-2">
             <Text className="text-base font-semibold text-[#111322]">Receiver Account</Text>
             <View className="flex-row items-center justify-between gap-3 py-4">
               <View className="flex-row items-center gap-3">
@@ -28,7 +28,7 @@ export default function WithdrawalTransactionDetails() {
             <Text className="text-base font-semibold text-[#111322]">Amount</Text>
             <TextInput
               placeholder="₦ 0.00"
-              className="mt-2  h-12   flex-grow rounded-lg border border-[#DCDFE3]  bg-[#F2F2F2] px-3 text-sm font-semibold text-[#758195]"
+              className="mt-2  h-12   flex-grow rounded-lg border border-[#DCDFE3] px-3 text-sm  text-[#758195]"
               placeholderTextColor="#A1A1A1"
             />
           </View>
@@ -37,14 +37,14 @@ export default function WithdrawalTransactionDetails() {
             <Text className="text-base font-semibold text-[#111322]">Narration</Text>
             <TextInput
               placeholder="Enter transaction description"
-              className="mt-2 h-12  flex-grow rounded-lg border border-[#DCDFE3]  bg-[#F2F2F2] px-3 text-sm font-semibold text-[#758195]"
+              className="mt-2 h-12  flex-grow rounded-lg border border-[#DCDFE3]  px-3 text-sm  text-[#758195]"
               placeholderTextColor="#A1A1A1"
             />
           </View>
           <Pressable
             onPress={() => router.push('./withdraw-passcode')}
-            className="mt-16 items-center justify-center rounded-[31px] bg-[#14281D] px-[32ppx] py-[20px] text-[#FFFCDC]">
-            <Text className="text-bold font-medium text-white">Withdraw money</Text>
+            className="mt-12 h-14 w-full items-center justify-center rounded-full bg-[#14281D]">
+            <Text className="text-bold font-medium text-[#FFFCDC]">Withdraw money</Text>
           </Pressable>
         </View>
       </View>

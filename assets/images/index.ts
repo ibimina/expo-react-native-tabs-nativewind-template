@@ -17,4 +17,9 @@ export const ImageAssets = {
   home: require('./home.png'),
   activeHome: require('./activehome.png'),
   back: require('./back.png'),
+  mark: require('./mark.png'),
+  registeration: require('./registeration.png'),
+  hero: require('./hero.png'),
+  user: require('./user.png'),
+  splash: require('./splash-custom.png'),
 };
